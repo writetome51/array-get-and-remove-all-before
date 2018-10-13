@@ -8,7 +8,11 @@
   },
   "keywords": [
     "array",
-    "content"
+    "get",
+    "remove",
+    "everything",
+    "before",
+    "value"
   ],
   "author": "Steve Thompson",
   "license": "MIT",

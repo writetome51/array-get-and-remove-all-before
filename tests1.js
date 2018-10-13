@@ -1,36 +1,34 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var getAndRemoveAllAfterFirst_1 = require("./getAndRemoveAllAfterFirst");
+var getAndRemoveAllBeforeFirst_1 = require("./getAndRemoveAllBeforeFirst");
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // Test 1
-var removed = getAndRemoveAllAfterFirst_1.getAndRemoveAllAfterFirst(10, arr);
-if (removed.length === 20 && removed[0] === 1 && removed[9] === 10 &&
-    removed[19] === 10)
+var removed = getAndRemoveAllBeforeFirst_1.getAndRemoveAllBeforeFirst(10, arr);
+if (removed.length === 9 && removed[0] === 1 && removed[8] === 9)
     console.log('test 1 passed');
 else
     console.log('test 1 failed');
 // Test 2
-if (arr.length === 10 && arr[0] === 1 && arr[9] === 10)
+if (arr.length === 21 && arr[0] === 10 && arr[10] === 10 && arr[20] === 10)
     console.log('test 2 passed');
 else
     console.log('test 2 failed');
 // Test 3
 arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-removed = getAndRemoveAllAfterFirst_1.getAndRemoveAllAfterFirst(5, arr);
-if (removed.length === 25 && removed[0] === 6 && removed[14] === 10 &&
-    removed[24] === 10)
+removed = getAndRemoveAllBeforeFirst_1.getAndRemoveAllBeforeFirst(5, arr);
+if (removed.length === 4 && removed[0] === 1 && removed[3] === 4)
     console.log('test 3 passed');
 else
     console.log('test 3 failed');
 // Test 4
-if (arr.length === 5 && arr[0] === 1 && arr[4] === 5)
+if (arr.length === 26 && arr[0] === 5 && arr[4] === 9 && arr[15] === 10 && arr[25] === 10)
     console.log('test 4 passed');
 else
     console.log('test 4 failed');
 // Test 5: if value isn't in array, should trigger error:
 var errorTriggered = false;
 try {
-    getAndRemoveAllAfterFirst_1.getAndRemoveAllAfterFirst('', arr);
+    getAndRemoveAllBeforeFirst_1.getAndRemoveAllBeforeFirst('', arr);
 }
 catch (e) {
     errorTriggered = true;
@@ -42,7 +40,7 @@ else
 // Test 6: if second argument isn't array, should trigger error:
 errorTriggered = false;
 try {
-    getAndRemoveAllAfterFirst_1.getAndRemoveAllAfterFirst('', 'hello everybody!!!');
+    getAndRemoveAllBeforeFirst_1.getAndRemoveAllBeforeFirst('', 'hello everybody!!!');
 }
 catch (e) {
     errorTriggered = true;
@@ -54,7 +52,7 @@ else
 // Test 7: if first arg is not primitive or array, should trigger error:
 errorTriggered = false;
 try {
-    getAndRemoveAllAfterFirst_1.getAndRemoveAllAfterFirst({}, arr);
+    getAndRemoveAllBeforeFirst_1.getAndRemoveAllBeforeFirst({}, arr);
 }
 catch (e) {
     errorTriggered = true;
