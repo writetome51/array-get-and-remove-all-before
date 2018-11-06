@@ -1,10 +1,14 @@
 {
   "name": "@writetome51/array-get-and-remove-all-before",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "functions that remove and return a section of the array",
-  "main": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/writetome51/array-get-and-remove-all-before.git"
   },
   "keywords": [
     "array",
@@ -16,7 +20,11 @@
   ],
   "author": "Steve Thompson",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/writetome51/array-get-and-remove-all-before/issues"
+  },
+  "homepage": "https://github.com/writetome51/array-get-and-remove-all-before#readme",
   "dependencies": {
-    "@writetome51/array-get-and-remove-all-before-or-after": "latest"
+    "@writetome51/array-get-and-remove-all-before-or-after": "1.0.3"
   }
 }
