@@ -1,7 +1,7 @@
 {
   "name": "@writetome51/array-get-and-remove-all-before",
   "version": "1.1.0",
-  "description": "functions that remove and return a section of the array",
+  "description": "2 functions: one removes and returns all array items before the first instance of a particular value, and the other removes and returns all array items before the last instance of a particular value",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
