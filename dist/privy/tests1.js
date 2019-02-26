@@ -1,9 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var index_1 = require("../index");
+var getAndRemoveAllBeforeFirst_1 = require("./getAndRemoveAllBeforeFirst");
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // Test 1
-var removed = index_1.getAndRemoveAllBeforeFirst(10, arr);
+var removed = getAndRemoveAllBeforeFirst_1.getAndRemoveAllBeforeFirst(10, arr);
 if (removed.length === 9 && removed[0] === 1 && removed[8] === 9)
     console.log('test 1 passed');
 else
@@ -15,7 +15,7 @@ else
     console.log('test 2 failed');
 // Test 3
 arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-removed = index_1.getAndRemoveAllBeforeFirst(5, arr);
+removed = getAndRemoveAllBeforeFirst_1.getAndRemoveAllBeforeFirst(5, arr);
 if (removed.length === 4 && removed[0] === 1 && removed[3] === 4)
     console.log('test 3 passed');
 else
@@ -28,7 +28,7 @@ else
 // Test 5: if value isn't in array, should trigger error:
 var errorTriggered = false;
 try {
-    index_1.getAndRemoveAllBeforeFirst('', arr);
+    getAndRemoveAllBeforeFirst_1.getAndRemoveAllBeforeFirst('', arr);
 }
 catch (e) {
     errorTriggered = true;
@@ -40,7 +40,7 @@ else
 // Test 6: if second argument isn't array, should trigger error:
 errorTriggered = false;
 try {
-    index_1.getAndRemoveAllBeforeFirst('', 'hello everybody!!!');
+    getAndRemoveAllBeforeFirst_1.getAndRemoveAllBeforeFirst('', 'hello everybody!!!');
 }
 catch (e) {
     errorTriggered = true;
@@ -52,7 +52,7 @@ else
 // Test 7: if first arg is not primitive or array, should trigger error:
 errorTriggered = false;
 try {
-    index_1.getAndRemoveAllBeforeFirst({}, arr);
+    getAndRemoveAllBeforeFirst_1.getAndRemoveAllBeforeFirst({}, arr);
 }
 catch (e) {
     errorTriggered = true;
