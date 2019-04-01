@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/array-get-and-remove-all-before",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "2 functions: one removes and returns all array items before the first instance of a particular value, and the other removes and returns all array items before the last instance of a particular value",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/writetome51/array-get-and-remove-all-before#readme",
   "dependencies": {
-    "@writetome51/array-get-and-remove-all-before-or-after": "~2.0.0"
+    "@writetome51/array-get-and-remove-all-before-or-after": "~2.0.1"
   }
 }
